@@ -1,0 +1,31 @@
+.home{
+    background: #fff;
+    Header{
+        background:rgba(204,204,204,1);
+        left: 0;
+        top: 0;
+    }
+    .swiper-container{
+        height: 1.8rem;
+        .swiper-pagination-bullet{
+            width: .08rem;
+            height: .08rem;
+            border-radius: 0%;
+            background: none;
+            border: 1px solid #000;
+            border-radius: 50%;
+            opacity: 1;
+        }
+        .swiper-pagination-bullet.swiper-pagination-bullet-active{
+            background: #000;
+        }
+    }
+    .scroll{
+        position: absolute;
+        top: .4rem;
+        bottom: .46rem;
+        width: 100%;
+        left: 0;
+    }
+    
+}

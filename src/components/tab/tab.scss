@@ -1,0 +1,29 @@
+#foot{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: .45rem;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    background: #fff;
+    ul{
+        display: flex;
+        justify-content: space-around;
+        height: 100%;
+        align-items: center;
+        >*{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            height: 100%;
+            justify-content: space-around;
+            align-items: center;
+            .iconfont{
+                font-size: .18rem;
+            }   
+        }
+        .active{
+            color:#f40;
+        }
+    }
+}

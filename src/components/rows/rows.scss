@@ -1,0 +1,28 @@
+.Rows{
+    height: .8rem;
+    padding: 0 .2rem;
+    h3{
+        height: .8rem;
+        line-height: .8rem;
+        font-size: .18rem;
+        font-weight: 900;
+    }
+    >div{
+        border-bottom: 1px solid #ccc;
+        padding-left:.1rem; 
+        position: relative;
+        .Rows-btn{
+            position: absolute;
+        }
+        .center{
+            top: .3rem;
+            left: 1.1rem;
+            font-size: .18rem
+        }
+        .right{
+            top: 0.3rem;
+            right: 0;
+            font-size: .18rem;
+        }
+    }
+}

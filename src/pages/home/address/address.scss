@@ -1,0 +1,36 @@
+.address{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    background: #fff;
+    Header{
+        background: rgba(204,204,204,1);
+    }
+    .scroll{
+        position: absolute;
+        top: .4rem;
+        bottom: .46rem;
+        width: 100%;
+        left: 0;
+    }
+    .remencity{
+        padding: .2rem;
+        h2{
+            font-size: .18rem;
+            margin-bottom: .05rem;
+        }
+        ol{
+            display: flex;
+            justify-content: space-between;
+            li{
+                border: 1px solid #ccc;
+                border-radius: .03rem;
+                padding: .06rem .2rem;
+                font-size: .16rem;
+            }
+        }
+    }
+}
