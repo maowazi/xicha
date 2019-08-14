@@ -8,8 +8,9 @@ class ScrollView extends React.Component{
         }
     }
     render() {
+        let {className} = this.props
         return (
-            <div className="scroll" ref="scroll">
+            <div className={`scroll ${className}`} ref="scroll">
                     {
                         this.props.children
                     }

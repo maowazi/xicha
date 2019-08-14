@@ -1,6 +1,6 @@
 const express = require("express");
 const serve = express();
-serve.get("/imgdata/list", (req,res) => {
+serve.get("/bnner/list", (req,res) => {
     res.json({
         code: 0,
         massage: "ok",

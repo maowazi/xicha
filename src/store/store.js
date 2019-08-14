@@ -1,4 +1,5 @@
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
+import ReduxThunk from "redux-thunk";
 import homeReducer from "./homeReducer/homeReducer";
 import menuReducer from "./menuReducer/menuReducer";
 import timeReducer from "./timeReducer/timerReducer";
@@ -13,5 +14,5 @@ const Reducer = combineReducers({
     mineRedeucer,
     userReducer
 })
-const store = createStore(Reducer);
+const store = createStore(Reducer, applyMiddleware(ReduxThunk));
 export default store;
