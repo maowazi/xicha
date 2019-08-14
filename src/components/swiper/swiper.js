@@ -15,7 +15,6 @@ class Swip extends React.Component {
                     {
                         imglist.map((item, index) => (
                             <div className="swiper-slide" key={index}><img src={item} alt="图片加载失败" /></div>
-                            
                         ))
                     }
                 </div>
