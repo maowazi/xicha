@@ -9,14 +9,14 @@ import { bannerAction } from "../../../action/action";
 import {connect } from "react-redux";
 class Home extends React.Component{
     render() {
-        let {imgList} = this.props
+        let { imgList, selectCity} = this.props
         return (
             <div className="home">
                 <Header title={"喜茶时光"} />
                 <ScrollView className="scrollwarp">
                     <div>
                         <Swiper imglist={imgList} />
-                        <Link to="/home/address"><Rows title={"壹方城店"} isaddress={true} /></Link>
+                        <Link to="/home/address"><Rows title={selectCity} isaddress={true} /></Link>
                         <Rows title={"立即购买"} isyoujiantou={true} />
                         <Rows title={"我的订单"} isyoujiantou={true} />
                         <Rows title={"喜茶时光"} isyoujiantou={true} />
@@ -33,7 +33,8 @@ class Home extends React.Component{
     }
 }
 const mapStateToProps = (state) => ({
-    imgList: state.homeReducer.homeList
+    imgList: state.homeReducer.homeList,
+    selectCity: state.homeReducer.selectCity
 })
 const mapDispathcToProps = (dispatch) => ({
     requeryBanner() {

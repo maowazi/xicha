@@ -1,18 +1,19 @@
 .cityList{
+    background: #fff;
     h2{
         font-size: .16rem;
         height: .4rem;
         line-height: .4rem;
         padding-left: .1rem;
     }
+    h3{
+        font-size: .16rem;
+        background:#ccc;
+        padding:.06rem .1rem;
+        display: flex;
+        justify-content: space-between;
+    }
     ol{
-        h3{
-            font-size: .16rem;
-            background:#ccc;
-            padding:.06rem .1rem;
-            display: flex;
-            justify-content: space-between;
-        }
         li{
             border-top: 1px solid #ccc;
             height: .3rem;
@@ -20,5 +21,13 @@
             padding-left: .1rem;
             line-height: .3rem;
         }
+    }
+    .active{
+        transition: .3s linear;
+        transform: rotateZ(0deg);
+    }
+    .active2{
+        transition: .3s linear;
+        transform: rotateZ(90deg);
     }
 }

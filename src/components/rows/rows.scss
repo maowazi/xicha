@@ -10,19 +10,9 @@
     >div{
         border-bottom: 1px solid #ccc;
         padding-left:.1rem; 
-        position: relative;
-        .Rows-btn{
-            position: absolute;
-        }
-        .center{
-            top: .3rem;
-            left: 1.1rem;
-            font-size: .18rem
-        }
-        .right{
-            top: 0.3rem;
-            right: 0;
-            font-size: .18rem;
-        }
+        display: flex;
+        justify-content: space-between;
+        height: .8rem;
+        line-height: .8rem;
     }
 }

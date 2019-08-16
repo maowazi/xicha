@@ -1,4 +1,4 @@
-import {banner_list_type } from "./actionType";
+import {banner_list_type,selectCity_type } from "./actionType";
 import { fetch as fetchData } from "whatwg-fetch";
 import {banner_api } from "../utilApi/uitlApi";
 const bannerAction = () => {
@@ -17,8 +17,30 @@ const bannerAction = () => {
         })
     }
 }
+const Action = (params) => {
+    let action = (val) => ({
+        type: params[0],
+        val: val
+    })
+    return (dispatch) => {
+        fetchData(params[1])
+            .then(res => res.json())
+            .then((data) => {
+                dispatch(action(data))
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }
+}
+const actonselect = (val) => ({
+    type: selectCity_type,
+    val
+})
 export {
-    bannerAction
+    bannerAction,
+    Action,
+    actonselect
 }
 
 
