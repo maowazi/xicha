@@ -37,10 +37,15 @@ const actonselect = (val) => ({
     type: selectCity_type,
     val
 })
+const addCartaction = (params) => ({
+    type: params[0],
+    val:params[1]
+})
 export {
     bannerAction,
     Action,
-    actonselect
+    actonselect,
+    addCartaction
 }
 
 

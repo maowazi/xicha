@@ -1,0 +1,29 @@
+.computeWrap{
+    background: #fff;
+    border-top:1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    padding: .1rem;
+    width: 100%; 
+    box-sizing: border-box;
+    >div{
+        p:first-child{
+            font-size: .16rem;
+            span{
+                color:#f40;
+            }
+        }
+        p:last-child{
+            columns: #666666;
+            height: .25rem;
+            line-height: .25rem;
+        }
+    }
+    button{
+        border: 0;
+        background: #f40;
+        width: .7rem;
+        color: #fff;
+        border-radius: .05rem;
+    }
+}

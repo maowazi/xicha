@@ -4,8 +4,8 @@ import Header from "../../../components/header/header";
 import MenuLefttNav from "./children/meniLiftNav/menuLeftNav";
 import MenuRightList from "./children/menuRightList/menuRightList";
 import { connect } from "react-redux";
-import { Action } from "../../../action/action";
-import { menuLeftNav_type } from "../../../action/actionType";
+import { Action,addCartaction } from "../../../action/action";
+import { menuLeftNav_type,cart_add_type } from "../../../action/actionType";
 import { menuLeftNav_api } from "../../../utilApi/uitlApi";
 import ScrollView from "../../../components/scrollView/scrollView";
 class Menu extends React.Component{
@@ -15,13 +15,13 @@ class Menu extends React.Component{
         let { leftNav} = this.props
         return (
             <div className="menu">
-                <Header title={"菜单"} />
+                <Header title={"菜单"} right={<p className="iconfont icon-gouwuche" onClick={this.onClick.bind(this)}></p>}/>
                 <div>
                     <ScrollView className="MenuLefttNav">
                         <MenuLefttNav leftNav={leftNav} onSelect={this.selectIndex}/>
                     </ScrollView>
                     <ScrollView className="menuRight" ref={this.MenuRightScroll}>
-                        <MenuRightList leftNav={leftNav} ref={this.MenuLeft}/>
+                        <MenuRightList leftNav={leftNav} ref={this.MenuLeft} onClick={this.props.addCart.bind(this)}/>
                     </ScrollView>
                 </div>
             </div>
@@ -38,6 +38,10 @@ class Menu extends React.Component{
         }
         this.MenuRightScroll.current.UpedScroll(height)
     }
+    onClick() {
+        this.props.history.push("/cart");
+    }
+    
 }
 const mapStateToProps = (state) => ({
     leftNav: state.menuReducer.menuLeftNav
@@ -45,6 +49,9 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
     getMenuLeftData() {
         dispatch(Action([menuLeftNav_type, menuLeftNav_api]))
+    },
+    addCart(params) {
+        dispatch(addCartaction([cart_add_type,params]))
     }
 })
 export default connect(mapStateToProps,mapDispatchToProps)(Menu);

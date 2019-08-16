@@ -3,7 +3,7 @@ const defaultMenustate = {
     menuLeftNav: []
 }
 const menuReducer = (state = defaultMenustate, action) => {
-    console.log(action)
+    // console.log(action)
     switch (action.type) {
         case menuLeftNav_type:
             return {

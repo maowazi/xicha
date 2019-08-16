@@ -11,6 +11,7 @@ const Mine = lazy(() => import("./pages/mine/mine/mine"));
 const Login = lazy(() => import("./components/login/login"));
 const Notfund = lazy(() => import("./components/notfund/notfund"));
 const Address = lazy(() => import("./pages/home/address/address"));
+const Cart = lazy(() => import("./pages/cart/cart"));
 function AppPage() {
     return (
         <div className="App">
@@ -22,7 +23,8 @@ function AppPage() {
                     <Redirect from = "/" exact to="/home"/>
                     <Route path="/home" exact component={Home} />
                     <Route path="/home/address" component={Address}/>
-                    <Route path="/menu" component={Menu}/>
+                    <Route path="/menu" component={Menu} />
+                    <Route path="/cart" component={Cart}/>
                     <Route path="/time" component={Time}/>
                     <Route path="/taketea" component={TakeTea}/>
                     <Route path="/mine" component={Mine} />

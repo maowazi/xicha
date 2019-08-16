@@ -1,10 +1,9 @@
 import React from "react";
-import "./menuRight.scss"
-import ScrollView from "../../../../../components/scrollView/scrollView";
+import "./menuRight.scss";
 class MenuRightList extends React.Component{
     dom = []
     render() {
-        let { leftNav } = this.props;
+        let { leftNav, onClick } = this.props;
         return (
                 <div className="menuRightList">
                     {
@@ -19,7 +18,7 @@ class MenuRightList extends React.Component{
                                             item.spuList.map((ite) => (
                                                 <li key={ite.id}>
                                                     <div>
-                                                        <img src={ite.imageUrl} />
+                                                        <img src={ite.imageUrl} alt="图片加载失败"/>
                                                     </div>
                                                     <div>
                                                         <h3>{ite.name}</h3>
@@ -28,7 +27,7 @@ class MenuRightList extends React.Component{
                                                                 <p>{ite.desc}</p>
                                                                 <span>￥{ite.price}</span>
                                                             </div>
-                                                            <div><span>购买</span></div>
+                                                            <div><button onClick={() => onClick(ite)}>购买</button></div>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -41,9 +40,6 @@ class MenuRightList extends React.Component{
                     }
                 </div>
         )
-    }
-    computedHeight=()=>{
-        console.log(11)
     }
 }
 export default MenuRightList;

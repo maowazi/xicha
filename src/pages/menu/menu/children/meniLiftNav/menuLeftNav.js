@@ -1,5 +1,4 @@
 import React from "react";
-import ScrollView from "../../../../../components/scrollView/scrollView";
 import "./menuLeftNav.scss";
 const MenuNav = (props) => {
     let { leftNav, onSelect } = props;
