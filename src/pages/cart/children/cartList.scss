@@ -7,11 +7,15 @@
     background: #fff;
     .cartListconent{
         background: #fff;
-        >div{
+        .cartListItem{
             display: flex;
-            border-bottom: 1px solid #ccc;
+            position: relative;
             padding: .1rem;
             justify-content: space-between;
+            background: #fff;
+            &.active{
+                transition: .2s linear;
+            }
             >div:first-child{
                 display: flex;
                 img{
@@ -40,6 +44,25 @@
                         background: #fff;
                     }
                 }
+            }
+        }
+        .cartItemWarp{
+            position: relative;
+            border-bottom: 1px solid #ccc;
+        }
+        .iconfontWarp{
+            position: absolute;
+            right: 0;
+            height: 100%;
+            width: .9rem;
+            background: #f40;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i{
+                transform: rotateZ(45deg);
+                font-size: .5rem;
+                color: #fff;
             }
         }
     }

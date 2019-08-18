@@ -21,6 +21,6 @@ const mapStateToProps = (state) => ({
     cartList:state.cartReducer.cartList
 })
 const mapDispatchToProps = (dispatch) => ({
-    
+
 })
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);
