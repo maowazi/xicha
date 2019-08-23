@@ -12,6 +12,7 @@ const Login = lazy(() => import("./components/login/login"));
 const Notfund = lazy(() => import("./components/notfund/notfund"));
 const Address = lazy(() => import("./pages/home/address/address"));
 const Cart = lazy(() => import("./pages/cart/cart"));
+const CartOrder = lazy(() => import("./pages/menu/menu/children/order/order"));
 function AppPage() {
     return (
         <div className="App">
@@ -24,7 +25,8 @@ function AppPage() {
                     <Route path="/home" exact component={Home} />
                     <Route path="/home/address" component={Address}/>
                     <Route path="/menu" component={Menu} />
-                    <Route path="/cart" component={Cart}/>
+                    <Route path="/cart" exact component={Cart} />
+                    <Route path="/cart/order" component={CartOrder}/>
                     <Route path="/time" component={Time}/>
                     <Route path="/taketea" component={TakeTea}/>
                     <Route path="/mine" component={Mine} />

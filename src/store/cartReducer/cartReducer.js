@@ -89,6 +89,15 @@ export default (state = defaultstate, action) => {
                 cartList: [...state.cartList],
                 price: newPriceDele
             }
+            //减一操作也可以这样
+            /*let newCartList = state.cartList.filter((item) => {
+                if (item.id === action.id) {
+                    return false
+                } else {
+                    return true
+                }
+                //if判断条件可以简化成 return item.id !== action.id
+            })*/
         case "PRICE":
             let num = 0;
                 state.cartList.map((item) => {

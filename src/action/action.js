@@ -1,4 +1,4 @@
-import {banner_list_type,selectCity_type } from "./actionType";
+import {banner_list_type,selectCity_type,takeTeaType } from "./actionType";
 import { fetch as fetchData } from "whatwg-fetch";
 import {banner_api } from "../utilApi/uitlApi";
 const bannerAction = () => {
@@ -41,11 +41,16 @@ const addCartaction = (params) => ({
     type: params[0],
     val:params[1]
 })
+const takeTeaAction = (val) => ({
+    type: takeTeaType,
+    val
+})
 export {
     bannerAction,
     Action,
     actonselect,
-    addCartaction
+    addCartaction,
+    takeTeaAction
 }
 
 

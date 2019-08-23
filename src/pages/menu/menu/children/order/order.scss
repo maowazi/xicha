@@ -1,0 +1,47 @@
+.order{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    z-index: 2;
+    Header{
+        background: #ccc;
+    }
+    .orderList{
+        margin-top: .4rem;
+        ul{
+            li{
+                display: flex;
+                padding: .1rem;
+                justify-content: space-between;
+                border-bottom:1px solid #ccc; 
+                div:first-child{
+                    display: flex;
+                }
+                div:last-child{
+                    p{
+                        color: #f40;
+                    }
+                }
+                img{
+                    width: .7rem;
+                    margin-right: .2rem;
+                }
+            }
+        }
+    }
+    .tabfooter{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: .4rem;
+        background: #f40;
+        line-height: .4rem;
+        text-align: center;
+        color: #fff;
+        font-size: .2rem;
+    }
+}

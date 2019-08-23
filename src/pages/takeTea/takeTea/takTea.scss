@@ -1,0 +1,45 @@
+.takTea{
+    Header{
+        background: #fff;
+    }
+    .takTeaScroll{
+        position: absolute;
+        top: .4rem;
+        left: 0;
+        bottom: .46rem;
+        width: 100%;
+        background: #ccc;
+    }
+    ul{
+        background: #fff;
+        >div{
+            width: 100%;
+            height: .5rem;
+            background: blue;
+            line-height: .5rem;
+            text-align: center;
+            i{
+                vertical-align: middle;
+            }
+        }
+        li{
+            border-bottom: 1px solid #ccc;
+            padding: .1rem;
+            div:first-child{
+                margin-bottom: .2rem;
+            }
+            div:last-child{
+                display: flex;
+                justify-content: space-between;
+                p:first-child{
+                    color:#f40;
+                    font-size: .16rem;
+                }
+                p:last-child{
+                    border: 1px solid #ccc;
+                    padding: .05rem .1rem;
+                }
+            }
+        }
+    }
+}
