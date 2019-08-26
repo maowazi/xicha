@@ -22,12 +22,4 @@ module.exports = function (app) {
         //     "^/api": "/"
         // },
     }));
-    app.use(proxy('/data', {
-        // target: 'http://localhost:9000',
-        secure: false,
-        changeOrigin: true,
-        // pathRewrite: {
-        //     "^/api": "/"
-        // },
-    }));
 };

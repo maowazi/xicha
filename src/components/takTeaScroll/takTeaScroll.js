@@ -16,19 +16,15 @@ class takTeaScroll extends React.Component {
             scrollX: true,
             scrollY: true,
             click: true,
-            tap: true
+            tap: true,
+            probeType:2
         })
         this.scroll.on("beforeScrollStart", () => {    //监听滚动前事件,在滚动前重新计算可以滚动的高度
             this.scroll.refresh()
         })
-    }
-    UpedScroll = (params) => {
-        // this.scroll.scrollTo(0, params, 0)
-        // if (this.scroll.maxScrollY <= params) {
-        //     this.scroll.scrollTo(0, params, 1000)
-        // } else {
-        //     this.scroll.scrollTo(0, this.scroll.maxScrollY, 1000)
-        // }
+        // this.scroll.on("scroll", () => {   //监听是否滚动(probeType 必须要配置)
+        //     console.log("滚动了")
+        // })
     }
 }
 export default takTeaScroll;
